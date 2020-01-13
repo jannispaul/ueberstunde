@@ -1,0 +1,169 @@
+/* latin-ext */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Oswald Regular"), local("Oswald-Regular"),
+    url("/fonts/Oswald-Regular.woff2") format("woff2");
+}
+/* @font-face {
+  font-family: "Oswald";
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Oswald Medium"), local("Oswald-Medium"),
+    url("/fonts/Oswald-Medium.woff2") format("woff2");
+} */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Oswald Medium"), local("Oswald-Medium"),
+    url("/fonts/Oswald-Medium.woff2") format("woff2");
+}
+/* latin-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("/fonts/OpenSans-Regular.woff2") format("woff2");
+}
+/* latin-ext */
+/* @font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"),
+    url("/fonts/SourceSansPro-Semibold.woff2") format("woff2");
+} */
+
+body {
+  font-family: Avenir, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+}
+h1 {
+  font-size: 32px;
+  color: #030203;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 32px;
+  color: #030203;
+}
+h3 {
+  font-size: 26px;
+  /* margin-bottom: 12px; */
+  color: #030203;
+  text-align: left;
+  margin-bottom: 16px;
+}
+h4 {
+  font-size: 24px;
+  /* font-weight: 500; */
+}
+small {
+  font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+}
+/*Make links break and not overflow*/
+a {
+  overflow-wrap: break-word;
+  /* word-break: break-all; */
+}
+
+p,
+li,
+td,
+label {
+  line-height: 1.63;
+  color: #2c2c2c;
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 300;
+  color: #2c2c2c;
+  letter-spacing: 0.4px;
+}
+
+a {
+  color: inherit;
+}
+
+/* Small Screens */
+@media (min-width: 375px) {
+}
+/* Tablets */
+@media (min-width: 768px) {
+  h2 {
+    font-size: 46px;
+    margin-bottom: 25px;
+  }
+  h3 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+}
+/* Laptop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 46px;
+    margin-bottom: 25px;
+    /* font-weight: 600; */
+  }
+  h2 {
+    font-size: 46px;
+    margin-bottom: 25px;
+  }
+  h3 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  h4 {
+    font-size: 32px;
+    /* font-weight: 500; */
+  }
+
+  small {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+      sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+/* Desktop */
+@media (min-width: 2560px) {
+}

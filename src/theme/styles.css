@@ -1,0 +1,31 @@
+/*Browser Reset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: initial;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  height: 100%;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+iframe {
+  border: none;
+  max-width: 100%;
+}
+
+@media (min-width: 376px) {
+  body {
+    user-select: auto;
+  }
+}

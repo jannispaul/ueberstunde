@@ -1,0 +1,8 @@
+# Redirect domain aliases to primary domain
+# https://www.wall-street-weekly.com* https://wall-street-weekly.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://optimistic-swanson-d07dac.netlify.com/* https://wall-street-weekly.com/:splat 301!
+
+
+
