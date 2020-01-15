@@ -12,6 +12,7 @@ const StyledHero = styled.section`
   position: relative;
   display: block;
   width: 100%;
+  /* background: #090006; */
 `
 const ContentContainer = styled.div`
   max-width: 1256px;

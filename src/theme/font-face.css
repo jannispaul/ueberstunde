@@ -1,37 +1,30 @@
 /* latin-ext */
 @font-face {
-  font-family: "Oswald";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Oswald Regular"), local("Oswald-Regular"),
-    url("/fonts/Oswald-Regular.woff2") format("woff2");
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url("/fonts/Poppins-Regular.woff2") format("woff2");
 }
-/* @font-face {
-  font-family: "Oswald";
-  font-style: medium;
-  font-weight: 500;
-  font-display: swap;
-  src: local("Oswald Medium"), local("Oswald-Medium"),
-    url("/fonts/Oswald-Medium.woff2") format("woff2");
-} */
+
 @font-face {
-  font-family: "Oswald";
+  font-family: "Poppins";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-display: swap;
-  src: local("Oswald Medium"), local("Oswald-Medium"),
-    url("/fonts/Oswald-Medium.woff2") format("woff2");
+  src: local("Poppins Bold"), local("Poppins-Bold"),
+    url("/fonts/Poppins-Bold.woff2") format("woff2");
 }
 /* latin-ext */
-@font-face {
+/* @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local("Open Sans Regular"), local("OpenSans-Regular"),
     url("/fonts/OpenSans-Regular.woff2") format("woff2");
-}
+} */
 /* latin-ext */
 /* @font-face {
   font-family: "Source Sans Pro";
@@ -43,7 +36,7 @@
 } */
 
 body {
-  font-family: Avenir, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -57,10 +50,10 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 600;
 }
 h1 {
   font-size: 32px;
@@ -83,8 +76,7 @@ h4 {
   /* font-weight: 500; */
 }
 small {
-  font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
-    sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;

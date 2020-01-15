@@ -24,7 +24,7 @@ const StyledAbout = styled.section`
 const SocialContainer = styled.div`
   /* font-family: AvenirNextCondensed-Bold, "Open Sans", -apple-system,
     BlinkMacSystemFont, Arial, sans-serif; */
-  font-family: Oswald;
+  /* font-family: Oswald; */
   font-size: 21.6px;
   color: #ff0045;
   letter-spacing: 0.34px;

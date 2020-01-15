@@ -16,9 +16,9 @@ const IndexPage = () => (
       lang="de"
     />
     <Hero></Hero>
-    <ScrollAnchor id="episoden"></ScrollAnchor>
+    <ScrollAnchor id="beitraege"></ScrollAnchor>
     <RecentEpisodes></RecentEpisodes>
-    <ScrollAnchor id="host"></ScrollAnchor>
+    <ScrollAnchor id="hosts"></ScrollAnchor>
     <About></About>
     <KeepInTouch></KeepInTouch>
     <MPProducts></MPProducts>

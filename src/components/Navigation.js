@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Logo from "../content/images/wsw-logo.svg"
+import Logo from "../content/images/ueberstunde-logo.svg"
 import { device } from "../theme/breakpoints"
 import Icon from "../components/Icon"
 import { ICONS } from "../theme/Icons"
@@ -49,10 +49,10 @@ const StyledLogo = styled(Link)`
   height: 100%;
 
   & > img {
-    width: 105px;
+    width: 200px;
     height: auto;
     @media ${device.laptop} {
-      width: 175px;
+      width: 320px;
     }
   }
 `
@@ -77,8 +77,8 @@ const StyledLinks = styled.div`
   @media ${device.laptop} {
     display: inline-block;
   }
-  font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
-    sans-serif;
+  /* font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif; */
   letter-spacing: 0.73px;
   font-size: 24px;
   font-weight: 400;
@@ -115,8 +115,8 @@ const Navigation = props => {
       <div>
         <StyledLinks>
           <Link to="/">Podcast</Link>
-          <Link to="/#episoden">Episoden</Link>
-          <Link to="/#host">Host</Link>
+          <Link to="/#beitraege">Beiträge</Link>
+          <Link to="/#hosts">Hosts</Link>
         </StyledLinks>
 
         <StyledLogo to="/">
