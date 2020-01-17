@@ -53,10 +53,7 @@ export default () => (
     `}
     render={data => (
       <StyledRecentEpisodes>
-        <h2>Aktuelle Folgen</h2>
-        {/* <img src={headlineBG} alt="Airplanes flying away from headline" /> */}
-        {/* <StyledHeadline>
-        </StyledHeadline> */}
+        <h2>Aktuelle Beiträge</h2>
         {data.allContentfulPost.edges.map(({ node }) => (
           <EpisodeLink
             key={node.id}

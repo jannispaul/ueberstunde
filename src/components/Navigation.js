@@ -11,6 +11,8 @@ const StyledNav = styled.header`
   height: 142px;
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+  position: relative;
+  z-index: 100;
   @media ${device.laptop} {
     height: 165px;
   }
@@ -52,6 +54,9 @@ const StyledLogo = styled(Link)`
     width: 200px;
     height: auto;
     @media ${device.laptop} {
+      width: 250px;
+    }
+    @media ${device.laptopL} {
       width: 320px;
     }
   }

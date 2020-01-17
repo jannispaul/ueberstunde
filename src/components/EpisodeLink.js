@@ -32,12 +32,9 @@ const StyledH3Link = styled(Link)`
 `
 
 const StyledLink = styled(Link)`
-  /* font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
-    sans-serif; */
-  font-size: 16px;
-  color: #ff0045;
-  letter-spacing: 0.25px;
-  text-transform: uppercase;
+  font-size: 19px;
+  color: #7300dc;
+  /* text-transform: uppercase; */
 `
 
 const EpisodeLink = props => (

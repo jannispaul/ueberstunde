@@ -12,17 +12,21 @@ const StyledHero = styled.section`
   position: relative;
   display: block;
   width: 100%;
-  /* background: #090006; */
+  background: #090006;
 `
 const ContentContainer = styled.div`
   max-width: 1256px;
   margin: auto;
+  position: relative;
+  /* overflow-y: hidden; */
+  overflow-x: visible;
+
   @media ${device.laptop} {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row: auto;
+    grid-template-rows: 750px;
+    /* grid-row: auto; */
     height: 750px;
-    overflow: hidden;
     align-items: center;
   }
 `
@@ -31,9 +35,14 @@ const HeroContent = styled.div`
   position: relative;
   z-index: 1;
   padding: 24px;
-  max-width: 560px;
+  max-width: 748px;
+  margin: auto;
+  & > p {
+    color: #fff;
+  }
   & > h1 {
     /* margin-bottom: 1rem; */
+    color: #fff;
   }
   @media ${device.laptop} {
     grid-column: 1/3;
@@ -55,9 +64,9 @@ const Hero = props => (
   <StyledHero>
     <HeroImage></HeroImage>
     <ContentContainer>
-      <HeroImageMobile></HeroImageMobile>
+      {/* <HeroImageMobile></HeroImageMobile> */}
       <HeroContent>
-        <h1>Wall Street Weekly</h1>
+        <h1>Überstunde – mit Marina Weisband und Michael Bröcker</h1>
         <p>
           Börsen-Reporterin Sophie Schimansky berichtet live aus New York über
           die Themen, die Börsianer und Anleger bewegen. Dazu: verständliche

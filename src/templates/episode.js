@@ -86,6 +86,9 @@ const ContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  & > h1 {
+    color: #fff;
+  }
   @media ${device.tablet} {
     padding: 36px 24px;
   }
@@ -188,7 +191,7 @@ const EpisodeTemplate = ({ data: { podcast, ogimage, site }, location }) => {
           alt={podcast.image.description}
         />
         <ContentContainer>
-          <SmallLabel>{podcast.createdAt}</SmallLabel>
+          <SmallLabel color="white">{podcast.createdAt}</SmallLabel>
           <h1>{podcast.title}</h1>
           <PodigeePlayer source={podcast.podcastSlug}></PodigeePlayer>
         </ContentContainer>

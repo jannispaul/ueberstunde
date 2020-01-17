@@ -5,15 +5,22 @@ import styled from "styled-components"
 import { device } from "../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
-  display: none;
+  display: block;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: -100px;
+  z-index: 0;
 
   @media ${device.laptop} {
-    display: block;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
     position: absolute !important;
+    margin-top: 0;
+    margin-bottom: -100px;
+    top: 0;
+    right: 0;
+    left: 40%;
+    max-height: 100%;
+    max-height: 100%;
+    max-width: 80%;
   }
 `
 
@@ -35,8 +42,8 @@ const HeroImage = () => (
       return (
         <StyledImage
           fluid={image.fluid}
-          imgStyle={{ objectFit: "cover", objectPosition: "100% 100%" }}
-          alt="Sophie Schimansky vor den Wolkenkratzern der Wall Street"
+          imgStyle={{ objectFit: "cover" }}
+          alt="Marina Weisband und Michael Bröcker über dem Sonnenuntergang in Berlin"
         />
       )
     }}
