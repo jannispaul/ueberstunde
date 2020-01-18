@@ -16,6 +16,7 @@ import ContentfulRichTextImage from "../components/ContentfulRichTextImage"
 import KeepInTouch from "../components/KeepInTouch"
 // import MoreOfTheAmericans from "../components/MoreOfTheAmericans"
 import SmallLabel from "../components/SmallLabel"
+import Slider from "../components/Slider"
 import EpisodeHeroImage from "../components/ImageComponents/EpisodeHeroImage"
 // import Form from "../components/Form"
 // import Fragments from "../components/Fragments"
@@ -45,6 +46,12 @@ export const query = graphql`
       slug
       podcastSlug
       createdAt(formatString: "DD. MMMM YYYY", locale: "de-DE")
+      gallery {
+        id
+        sizes(maxWidth: 1920) {
+          ...GatsbyContentfulSizes_withWebp
+        }
+      }
     }
     ogimage: allImageSharp(
       filter: { fixed: { originalName: { eq: $filename } } }
@@ -271,6 +278,14 @@ const EpisodeTemplate = ({ data: { podcast, ogimage, site }, location }) => {
             },
           })}
         </div>
+        {/* {podcast.gallery.map(image => (
+          <Img
+            sizes={image.sizes}
+            imgStyle={{ objectFit: "cover", objectPosition: "100% 100%" }}
+            alt={image.description}
+          />
+        ))} */}
+        <Slider images={podcast.gallery}></Slider>
         <SocialContainer>
           Share:
           <a

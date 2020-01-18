@@ -1,0 +1,61 @@
+.carousel .control-dots .dot {
+  width: 20px;
+  height: 4px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+}
+
+.carousel .control-disabled.control-arrow {
+  opacity: 1;
+  width: 100px;
+}
+.carousel.carousel-slider .control-arrow,
+.carousel.carousel-slider .control-arrow:hover {
+  width: 70px;
+  opacity: 0.85;
+  background: none;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: none;
+}
+.carousel .control-next.control-arrow:before {
+  border-left: none;
+}
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  width: 50px;
+  height: 50px;
+  border-top: none;
+  border-bottom: none;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  content: "→";
+  border-radius: 40px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.carousel.carousel-slider .control-arrow:hover :before {
+  box-shadow: 10px 10px 1px 10px rgba(26, 26, 26, 1);
+}
+.control-prev {
+  transform: scale(-1, 1);
+}
+
+@media (min-width: 834px) {
+  .carousel.carousel-slider .control-arrow,
+  .carousel.carousel-slider .control-arrow:hover {
+    width: 100px;
+    opacity: 0.85;
+    background: none;
+  }
+
+  .carousel .control-dots .dot {
+    width: 40px;
+    height: 6px;
+    border-radius: 4px;
+  }
+}

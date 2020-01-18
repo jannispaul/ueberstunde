@@ -1,4 +1,4 @@
-### Type definitions saved at 2020-01-07T12:30:29.555Z ###
+### Type definitions saved at 2020-01-18T16:53:39.827Z ###
 
 type File implements Node @dontInfer {
   sourceInstanceName: String!
@@ -99,14 +99,7 @@ type MarkdownWordCount {
   words: Int
 }
 
-type MarkdownRemark implements Node
-  @childOf(
-    mimeTypes: ["text/markdown", "text/x-markdown"]
-    types: []
-    many: false
-  )
-  @derivedTypes
-  @dontInfer {
+type MarkdownRemark implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"], types: [], many: false) @derivedTypes @dontInfer {
   frontmatter: MarkdownRemarkFrontmatter
   excerpt: String
   rawMarkdownBody: String
@@ -171,51 +164,8 @@ input Potrace {
 }
 
 type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
-  fixed(
-    width: Int
-    height: Int
-    base64Width: Int
-    jpegProgressive: Boolean = true
-    pngCompressionSpeed: Int = 4
-    grayscale: Boolean = false
-    duotone: DuotoneGradient
-    traceSVG: Potrace
-    quality: Int
-    jpegQuality: Int
-    pngQuality: Int
-    webpQuality: Int
-    toFormat: ImageFormat = NO_CHANGE
-    toFormatBase64: ImageFormat = NO_CHANGE
-    cropFocus: ImageCropFocus = ATTENTION
-    fit: ImageFit = COVER
-    background: String = "rgba(0,0,0,1)"
-    rotate: Int = 0
-    trim: Float = 0
-  ): ImageSharpFixed
-  resolutions(
-    width: Int
-    height: Int
-    base64Width: Int
-    jpegProgressive: Boolean = true
-    pngCompressionSpeed: Int = 4
-    grayscale: Boolean = false
-    duotone: DuotoneGradient
-    traceSVG: Potrace
-    quality: Int
-    jpegQuality: Int
-    pngQuality: Int
-    webpQuality: Int
-    toFormat: ImageFormat = NO_CHANGE
-    toFormatBase64: ImageFormat = NO_CHANGE
-    cropFocus: ImageCropFocus = ATTENTION
-    fit: ImageFit = COVER
-    background: String = "rgba(0,0,0,1)"
-    rotate: Int = 0
-    trim: Float = 0
-  ): ImageSharpResolutions
-    @deprecated(
-      reason: "Resolutions was deprecated in Gatsby v2. It's been renamed to \"fixed\" https://example.com/write-docs-and-fix-this-example-link"
-    )
+  fixed(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat = NO_CHANGE, toFormatBase64: ImageFormat = NO_CHANGE, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpFixed
+  resolutions(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat = NO_CHANGE, toFormatBase64: ImageFormat = NO_CHANGE, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpResolutions @deprecated(reason: "Resolutions was deprecated in Gatsby v2. It's been renamed to \"fixed\" https://example.com/write-docs-and-fix-this-example-link")
   fluid(
     maxWidth: Int
     maxHeight: Int
@@ -269,32 +219,9 @@ type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
     A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]
     """
     srcSetBreakpoints: [Int] = []
-  ): ImageSharpSizes
-    @deprecated(
-      reason: "Sizes was deprecated in Gatsby v2. It's been renamed to \"fluid\" https://example.com/write-docs-and-fix-this-example-link"
-    )
+  ): ImageSharpSizes @deprecated(reason: "Sizes was deprecated in Gatsby v2. It's been renamed to \"fluid\" https://example.com/write-docs-and-fix-this-example-link")
   original: ImageSharpOriginal
-  resize(
-    width: Int
-    height: Int
-    quality: Int
-    jpegQuality: Int
-    pngQuality: Int
-    webpQuality: Int
-    jpegProgressive: Boolean = true
-    pngCompressionLevel: Int = 9
-    pngCompressionSpeed: Int = 4
-    grayscale: Boolean = false
-    duotone: DuotoneGradient
-    base64: Boolean = false
-    traceSVG: Potrace
-    toFormat: ImageFormat = NO_CHANGE
-    cropFocus: ImageCropFocus = ATTENTION
-    fit: ImageFit = COVER
-    background: String = "rgba(0,0,0,1)"
-    rotate: Int = 0
-    trim: Float = 0
-  ): ImageSharpResize
+  resize(width: Int, height: Int, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, jpegProgressive: Boolean = true, pngCompressionLevel: Int = 9, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, base64: Boolean = false, traceSVG: Potrace, toFormat: ImageFormat = NO_CHANGE, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpResize
 }
 
 type ImageSharpFixed {
@@ -435,8 +362,7 @@ type contentfulPostBodyRichTextNodeContentDataTargetSysSpaceSys {
   id: String
 }
 
-type contentfulPostBodyRichTextNodeContentDataTargetSysEnvironment
-  @derivedTypes {
+type contentfulPostBodyRichTextNodeContentDataTargetSysEnvironment @derivedTypes {
   sys: contentfulPostBodyRichTextNodeContentDataTargetSysEnvironmentSys
 }
 
@@ -471,8 +397,7 @@ type contentfulPostBodyRichTextNodeContentDataTargetFieldsFileDe @derivedTypes {
   contentType: String
 }
 
-type contentfulPostBodyRichTextNodeContentDataTargetFieldsFileDeDetails
-  @derivedTypes {
+type contentfulPostBodyRichTextNodeContentDataTargetFieldsFileDeDetails @derivedTypes {
   size: Int
   image: contentfulPostBodyRichTextNodeContentDataTargetFieldsFileDeDetailsImage
 }
@@ -484,6 +409,7 @@ type contentfulPostBodyRichTextNodeContentDataTargetFieldsFileDeDetailsImage {
 
 type contentfulPostBodyRichTextNodeContentContent @derivedTypes {
   data: contentfulPostBodyRichTextNodeContentContentData
+  marks: [contentfulPostBodyRichTextNodeContentContentMarks]
   value: String
   nodeType: String
   content: [contentfulPostBodyRichTextNodeContentContentContent]
@@ -491,6 +417,10 @@ type contentfulPostBodyRichTextNodeContentContent @derivedTypes {
 
 type contentfulPostBodyRichTextNodeContentContentData {
   uri: String
+}
+
+type contentfulPostBodyRichTextNodeContentContentMarks {
+  type: String
 }
 
 type contentfulPostBodyRichTextNodeContentContentContent {
@@ -507,8 +437,8 @@ type ContentfulPost implements Node @derivedTypes @dontInfer {
   slug: String
   podcastSlug: String
   image: ContentfulAsset @link(by: "id", from: "image___NODE")
-  description: contentfulPostDescriptionTextNode
-    @link(by: "id", from: "description___NODE")
+  gallery: [ContentfulAsset] @link(by: "id", from: "gallery___NODE")
+  description: contentfulPostDescriptionTextNode @link(by: "id", from: "description___NODE")
   body: contentfulPostBodyRichTextNode @link(by: "id", from: "body___NODE")
   spaceId: String
   contentful_id: String

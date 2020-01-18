@@ -37,7 +37,7 @@ const HeroImage = () => (
         <StyledImage
           fluid={image.fluid}
           imgStyle={{ objectFit: "cover", objectPosition: "100% 100%" }}
-          alt="Wolkenkratzer der Wall Street ragen in den Himmel"
+          alt="Sonnenuntergang über Berlin"
         />
       )
     }}
