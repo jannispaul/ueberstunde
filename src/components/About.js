@@ -8,31 +8,34 @@ import { device } from "../theme/breakpoints"
 
 const StyledAbout = styled.section`
   width: 100%;
-  padding: 48px 24px;
+  padding: 64px 24px 64px;
   background: #090006;
-
-  /* text-align: center; */
   & p,
   h2 {
     color: #fff;
   }
-  & > div {
-    max-width: 440px;
-    margin: auto;
+  @media ${device.tablet} {
+    padding: 64px 24px 16px;
+  }
+`
+const FlexContainer = styled.div`
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  & > div:first-of-type {
+    margin-bottom: 4rem;
   }
   @media ${device.tablet} {
-    padding: 80px 0;
-  }
-  @media ${device.laptop} {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    & > div:first-of-type {
+      margin-right: 4rem;
+    }
   }
 `
 
 const SocialContainer = styled.div`
-  /* font-family: AvenirNextCondensed-Bold, "Open Sans", -apple-system,
-    BlinkMacSystemFont, Arial, sans-serif; */
-  /* font-family: Oswald; */
   font-size: 21.6px;
   font-weight: 600;
   color: #ff0045;
@@ -58,90 +61,92 @@ const StyledIcon = styled.div`
 
 const About = props => (
   <StyledAbout>
-    <div>
-      <h2>Über Marina</h2>
-      <p>
-        Sophie Schimansky ist Volkswirtin und Journalistin und berichtet seit
-        Jahren aus der Welt der Finanzen und Wirtschaft – für TV, Print und
-        Radio. Sie lebt seit 2015 in New York und fühlt sich besonders auf dem
-        Börsenparkett der Wall Street zu Hause.
-      </p>
-      <SocialContainer>
-        Folgen:
-        <a
-          href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on linkedIn"
-        >
-          <StyledIcon>
-            <Icon icon={ICONS.LINKEDIN} />
-          </StyledIcon>
-        </a>
-        <a
-          href="https://instagram.com/sophiesnews"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on instagram"
-        >
-          <StyledIcon>
-            <Icon icon={ICONS.INSTAGRAM} />
-          </StyledIcon>
-        </a>
-        <a
-          href="https://twitter.com/soschimansky"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on twitter"
-        >
-          <StyledIcon>
-            <Icon icon={ICONS.TWITTER} />
-          </StyledIcon>
-        </a>
-      </SocialContainer>
-    </div>
-    <div>
-      <h2>Über Michael</h2>
-      <p>
-        Sophie Schimansky ist Volkswirtin und Journalistin und berichtet seit
-        Jahren aus der Welt der Finanzen und Wirtschaft – für TV, Print und
-        Radio. Sie lebt seit 2015 in New York und fühlt sich besonders auf dem
-        Börsenparkett der Wall Street zu Hause.
-      </p>
-      <SocialContainer>
-        Folgen:
-        <a
-          href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on linkedIn"
-        >
-          <StyledIcon>
-            <Icon icon={ICONS.LINKEDIN} />
-          </StyledIcon>
-        </a>
-        <a
-          href="https://instagram.com/sophiesnews"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on instagram"
-        >
-          <StyledIcon>
-            <Icon icon={ICONS.INSTAGRAM} />
-          </StyledIcon>
-        </a>
-        <a
-          href="https://twitter.com/soschimansky"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on twitter"
-        >
-          <StyledIcon>
-            <Icon icon={ICONS.TWITTER} />
-          </StyledIcon>
-        </a>
-      </SocialContainer>
-    </div>
+    <FlexContainer>
+      <div>
+        <h2>Über Marina</h2>
+        <p>
+          Sophie Schimansky ist Volkswirtin und Journalistin und berichtet seit
+          Jahren aus der Welt der Finanzen und Wirtschaft – für TV, Print und
+          Radio. Sie lebt seit 2015 in New York und fühlt sich besonders auf dem
+          Börsenparkett der Wall Street zu Hause.
+        </p>
+        <SocialContainer>
+          Folgen:
+          <a
+            href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sophie Schimansky on linkedIn"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.LINKEDIN} />
+            </StyledIcon>
+          </a>
+          <a
+            href="https://instagram.com/sophiesnews"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sophie Schimansky on instagram"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.INSTAGRAM} />
+            </StyledIcon>
+          </a>
+          <a
+            href="https://twitter.com/soschimansky"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sophie Schimansky on twitter"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.TWITTER} />
+            </StyledIcon>
+          </a>
+        </SocialContainer>
+      </div>
+      <div>
+        <h2>Über Michael</h2>
+        <p>
+          Sophie Schimansky ist Volkswirtin und Journalistin und berichtet seit
+          Jahren aus der Welt der Finanzen und Wirtschaft – für TV, Print und
+          Radio. Sie lebt seit 2015 in New York und fühlt sich besonders auf dem
+          Börsenparkett der Wall Street zu Hause.
+        </p>
+        <SocialContainer>
+          Folgen:
+          <a
+            href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sophie Schimansky on linkedIn"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.LINKEDIN} />
+            </StyledIcon>
+          </a>
+          <a
+            href="https://instagram.com/sophiesnews"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sophie Schimansky on instagram"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.INSTAGRAM} />
+            </StyledIcon>
+          </a>
+          <a
+            href="https://twitter.com/soschimansky"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sophie Schimansky on twitter"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.TWITTER} />
+            </StyledIcon>
+          </a>
+        </SocialContainer>
+      </div>
+    </FlexContainer>
   </StyledAbout>
 )
 
