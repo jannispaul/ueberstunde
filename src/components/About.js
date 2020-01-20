@@ -3,13 +3,16 @@ import styled from "styled-components"
 // import { Link } from "gatsby"
 
 import Icon from "../components/Icon"
+import AboutBGImage from "../components/ImageComponents/AboutBGImage"
 import { ICONS } from "../theme/Icons"
 import { device } from "../theme/breakpoints"
 
 const StyledAbout = styled.section`
+  position: relative;
   width: 100%;
   padding: 64px 24px 64px;
   background: #090006;
+  overflow: hidden;
   & p,
   h2 {
     color: #fff;
@@ -22,6 +25,8 @@ const FlexContainer = styled.div`
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
   & > div:first-of-type {
     margin-bottom: 4rem;
   }
@@ -147,6 +152,7 @@ const About = props => (
         </SocialContainer>
       </div>
     </FlexContainer>
+    <AboutBGImage></AboutBGImage>
   </StyledAbout>
 )
 
