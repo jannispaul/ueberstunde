@@ -51,7 +51,7 @@ const StyledLogo = styled(Link)`
   height: 100%;
 
   & > img {
-    width: 200px;
+    width: 170px;
     height: auto;
     @media ${device.laptop} {
       width: 250px;

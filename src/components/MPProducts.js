@@ -35,12 +35,12 @@ const ProductContainer = styled.div`
   max-width: 900px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
   margin-top: 32px;
   grid-gap: 12px;
   justify-content: center;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
     /* grid-template-columns: repeat(4, minmax(192px, 1fr)); */
     margin-top: 64px;
   }
@@ -59,7 +59,7 @@ const ProductContainer = styled.div`
     width: 100%;
 
     @media ${device.laptop} {
-      font-size: 22px;
+      font-size: 20px;
       letter-spacing: 0.27px;
       line-height: 30px;
     }
