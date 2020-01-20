@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 import HeroImage from "./ImageComponents/HeroImage"
-import HeroImageMobile from "./ImageComponents/HeroImageMobile"
 import ProviderLogos from "./ProviderLogos"
 import { device } from "../theme/breakpoints"
 import { Link } from "gatsby"
@@ -65,7 +64,6 @@ const Hero = props => (
   <StyledHero>
     <HeroImage></HeroImage>
     <ContentContainer>
-      {/* <HeroImageMobile></HeroImageMobile> */}
       <HeroContent>
         <h1>Überstunde – mit Marina Weisband und Michael Bröcker</h1>
         <p>
