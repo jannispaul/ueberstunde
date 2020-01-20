@@ -85,7 +85,7 @@ const StyledLinks = styled.div`
   /* font-family: Oswald, "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif; */
   letter-spacing: 0.73px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   color: #030203;
   grid-column: 1/3;

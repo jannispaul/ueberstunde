@@ -51,6 +51,7 @@ const HeroContent = styled.div`
 `
 
 const MoreLink = styled(Link)`
+  color: #fff;
   display: flex;
   text-decoration: none;
   line-height: 1.3;
