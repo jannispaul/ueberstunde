@@ -39,20 +39,18 @@ class StaticPodigeePlayer extends React.Component {
 
   render() {
     const configuration = this.props.configuration || this.jsonConfig()
-    {
-      if (this.props.source) {
-        return (
-          <div>
-            <div
-              className="podigee-podcast-player"
-              data-configuration={configuration}
-              src={this.playerSource}
-            ></div>
-          </div>
-        )
-      } else {
-        return ""
-      }
+    if (this.props.source) {
+      return (
+        <div>
+          <div
+            className="podigee-podcast-player"
+            data-configuration={configuration}
+            src={this.playerSource}
+          ></div>
+        </div>
+      )
+    } else {
+      return ""
     }
   }
 }
