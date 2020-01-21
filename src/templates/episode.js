@@ -285,7 +285,7 @@ const EpisodeTemplate = ({ data: { podcast, ogimage, site }, location }) => {
             alt={image.description}
           />
         ))} */}
-        <Slider images={podcast.gallery}></Slider>
+        {podcast.gallery ? <Slider images={podcast.gallery}></Slider> : ""}
         <SocialContainer>
           Share:
           <a

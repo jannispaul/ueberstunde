@@ -22,7 +22,7 @@ module.exports = {
     title: `Die Überstunde – mit Marina Weisband und Michael Bröcker`,
     description: `Die Überstunde das neue Live und Podcast-Format von Media Pioneer mit Marina Weisband und Michael Bröcker.`,
     author: `Marina Weisband, Michael Bröcker`,
-    siteUrl: `https://überstunde.com`,
+    siteUrl: `https://xn--berstunde-p9a.com`,
     keywords: `Media Pioneer, Podcast, Überstunde, Michael Bröcker, Marina Weisband, Feierabend-Talk`,
   },
   plugins: [
