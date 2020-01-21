@@ -65,12 +65,15 @@ const Hero = props => (
     <HeroImage></HeroImage>
     <ContentContainer>
       <HeroContent>
-        <h1>Überstunde – mit Marina Weisband und Michael Bröcker</h1>
+        <h1>Die Überstunde – mit Marina Weisband und Michael Bröcker</h1>
         <p>
-          Börsen-Reporterin Sophie Schimansky berichtet live aus New York über
-          die Themen, die Börsianer und Anleger bewegen. Dazu: verständliche
-          Analysen und spannende Hintergrundgespräche rund um Dow Jones, Nasdaq
-          und S&P 500.
+          Die „Überstunde“ ist der ausgeruhte Feierabend-Talk in der Hauptstadt.
+          In dem als Podcast-Format sprechen Pioneer-Chefredakteur Michael
+          Bröcker und die frühere Piraten-Geschäftsführerin Marina Weisband mit
+          einem Gast aus Politik, Wirtschaft oder Gesellschaft eine Stunde über
+          ein Thema, das diese Person besonders ausmacht. Ziel: der
+          Erkenntnisgewinn für einen besseren Diskurs in der Gesellschaft. Ein
+          Gast, eine Stunde, ein Thema. In der Überstunde.
         </p>
 
         <ProviderLogos></ProviderLogos>

@@ -19,11 +19,11 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: `Überstunded – Podcast`,
-    description: `Börsen-Reporterin Sophie Schimansky berichtet live aus New York über die Themen, die Börsianer und Anleger bewegen.`,
-    author: `Sophie Schimansky`,
-    siteUrl: `localhost:8000`, //https://wall-street-weekly.com
-    keywords: `podcast, börse, wall street, dow jones, nasdaq, dax, media pioneer, steingart`,
+    title: `Die Überstunde – mit Marina Weisband und Michael Bröcker`,
+    description: `Die Überstunde das neue Live und Podcast-Format von Media Pioneer mit Marina Weisband und Michael Bröcker.`,
+    author: `Marina Weisband, Michael Bröcker`,
+    siteUrl: `https://überstunde.com`,
+    keywords: `Media Pioneer, Podcast, Überstunde, Michael Bröcker, Marina Weisband, Feierabend-Talk`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

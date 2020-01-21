@@ -82,30 +82,30 @@ const Footer = props => (
       </div>
       <div>
         <a
-          href="https://instagram.com/sophiesnews"
+          href="https://www.instagram.com/media.pioneer/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on instagram"
+          aria-label="Media Pioneer on instagram"
         >
           <StyledIcon>
             <Icon icon={ICONS.INSTAGRAM} />
           </StyledIcon>
         </a>
         <a
-          href="https://twitter.com/soschimansky"
+          href="https://twitter.com/mediapioneercom"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on twitter"
+          aria-label="Media Pioneer on twitter"
         >
           <StyledIcon>
             <Icon icon={ICONS.TWITTER} />
           </StyledIcon>
         </a>
         <a
-          href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
+          href="https://www.linkedin.com/company/media-pioneer"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Sophie Schimansky on linkedIn"
+          aria-label="Media Pioneer on linkedIn"
         >
           <StyledIcon>
             <Icon icon={ICONS.LINKEDIN} />

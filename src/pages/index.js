@@ -12,7 +12,7 @@ import ScrollAnchor from "../components/ScrollAnchor"
 const IndexPage = () => (
   <Layout>
     <SEO
-      // title="Wall Street Weekly – Podcast mit Sophie Schimansky "
+      title="Die Überstunde – mit Marina Weisband und Michael Bröcker"
       lang="de"
     />
     <Hero></Hero>

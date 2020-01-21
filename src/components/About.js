@@ -70,38 +70,40 @@ const About = props => (
       <div>
         <h2>Über Marina</h2>
         <p>
-          Sophie Schimansky ist Volkswirtin und Journalistin und berichtet seit
-          Jahren aus der Welt der Finanzen und Wirtschaft – für TV, Print und
-          Radio. Sie lebt seit 2015 in New York und fühlt sich besonders auf dem
-          Börsenparkett der Wall Street zu Hause.
+          Marina Weisband ist Publizistin, Grünen-Mitglied und war politische
+          Geschäftsführerin der Piratenpartei. Die 32-jährige Diplom-Psychologin
+          wuchs als Kind einer jüdischen Familie in Kiew auf. 1994 zog sie mit
+          ihrer Familie als Kontingentflüchting nach Deutschland. Weisband lebt
+          in Münster und engagiert sich für ein Schülerbeteiligungsprojekt zur
+          Vermittlung von Demokratie. Zeitgemäße Bildung ist ihr Herzensthema.
         </p>
         <SocialContainer>
           Folgen:
           <a
-            href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
+            href="https://www.linkedin.com/in/marina-weisband-20a499110/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Sophie Schimansky on linkedIn"
+            aria-label="Marina Weisband on linkedIn"
           >
             <StyledIcon>
               <Icon icon={ICONS.LINKEDIN} />
             </StyledIcon>
           </a>
           <a
-            href="https://instagram.com/sophiesnews"
+            href="https://www.instagram.com/afelia/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Sophie Schimansky on instagram"
+            aria-label="Marina Weisband on instagram"
           >
             <StyledIcon>
               <Icon icon={ICONS.INSTAGRAM} />
             </StyledIcon>
           </a>
           <a
-            href="https://twitter.com/soschimansky"
+            href="https://twitter.com/Afelia"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Sophie Schimansky on twitter"
+            aria-label="Marina Weisband on twitter"
           >
             <StyledIcon>
               <Icon icon={ICONS.TWITTER} />
@@ -112,38 +114,41 @@ const About = props => (
       <div>
         <h2>Über Michael</h2>
         <p>
-          Sophie Schimansky ist Volkswirtin und Journalistin und berichtet seit
-          Jahren aus der Welt der Finanzen und Wirtschaft – für TV, Print und
-          Radio. Sie lebt seit 2015 in New York und fühlt sich besonders auf dem
-          Börsenparkett der Wall Street zu Hause.
+          Michael Bröcker ist Chefredakteur von ThePioneer. Der 42-jährige
+          Diplom-Volkswirt und frühere Chefredakteur der Rheinischen Post ist
+          Hauptstädter mit rheinischem Antlitz. Seine Leidenschaften gelten der
+          Politik, den klassischen Dingen des Lebens (bei Autos, Opern und den
+          alten Griechen) und dem digitalen Wandel in den Medien. In Gabor
+          Steingarts Medien-Startup ist er zuständig für: 100 Prozent
+          Journalismus.
         </p>
         <SocialContainer>
           Folgen:
           <a
-            href="https://www.linkedin.com/in/sophie-schimansky-88436158/"
+            href="https://www.linkedin.com/in/michael-br%C3%B6cker-8a4a41155/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Sophie Schimansky on linkedIn"
+            aria-label="Michael Bröcker on linkedIn"
           >
             <StyledIcon>
               <Icon icon={ICONS.LINKEDIN} />
             </StyledIcon>
           </a>
           <a
-            href="https://instagram.com/sophiesnews"
+            href="https://www.instagram.com/mickbroecker/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Sophie Schimansky on instagram"
+            aria-label="Michael Bröcker on instagram"
           >
             <StyledIcon>
               <Icon icon={ICONS.INSTAGRAM} />
             </StyledIcon>
           </a>
           <a
-            href="https://twitter.com/soschimansky"
+            href="https://twitter.com/MichaelBroecker"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Sophie Schimansky on twitter"
+            aria-label="Michael Bröcker on twitter"
           >
             <StyledIcon>
               <Icon icon={ICONS.TWITTER} />
