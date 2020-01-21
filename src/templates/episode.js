@@ -140,7 +140,7 @@ const SocialContainer = styled.div`
   color: #ff0045;
   letter-spacing: 0.34px;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 48px;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
