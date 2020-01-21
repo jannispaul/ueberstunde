@@ -8,11 +8,14 @@ import { ICONS } from "../theme/Icons"
 
 const StyledNav = styled.header`
   width: 100%;
-  height: 142px;
+  height: 100px;
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
   position: relative;
   z-index: 100;
+  @media ${device.tablet} {
+    height: 142px;
+  }
   @media ${device.laptop} {
     height: 165px;
   }
@@ -25,8 +28,7 @@ const StyledNav = styled.header`
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 142px;
-
+    height: 100%;
     /* Desktop Grid */
     @media ${device.laptop} {
       grid-template-columns: repeat(3, 1fr);
@@ -41,18 +43,21 @@ const StyledNav = styled.header`
 const StyledLogo = styled(Link)`
   grid-column: 1;
 
-  @media ${device.laptop} {
-    grid-column: 2;
-    margin: auto;
-  }
   grid-row: 1;
   display: flex;
   align-items: center;
   height: 100%;
 
+  @media ${device.laptop} {
+    grid-column: 2;
+    margin: auto;
+  }
   & > img {
-    width: 170px;
+    width: 140px;
     height: auto;
+    @media ${device.tablet} {
+      width: 180px;
+    }
     @media ${device.laptop} {
       width: 250px;
     }

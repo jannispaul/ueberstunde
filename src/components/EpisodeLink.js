@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import SmallLabel from "./SmallLabel"
 import Img from "gatsby-image"
 import PodigeePlayer from "./PodigeePlayer"
+import { device } from "../theme/breakpoints"
 
 const Episode = styled.div`
   max-width: 700px;
@@ -16,7 +17,10 @@ const Episode = styled.div`
 `
 const PlayerContainer = styled.div`
   display: grid;
-  grid-template-columns: 120px 16px auto;
+  grid-template-columns: 90px 16px auto;
+  @media ${device.tablet} {
+    grid-template-columns: 120px 16px auto;
+  }
   grid-row-gap: 20px;
   margin-bottom: 16px;
   align-items: center;
@@ -27,7 +31,10 @@ const PlayerContainer = styled.div`
   }
 `
 const Excerpt = styled.div`
-  grid-column: ${props => (props.podcast ? "1/4" : "3/4")};
+  grid-column: 1/4;
+  @media ${device.tablet} {
+    grid-column: ${props => (props.podcast ? "1/4" : "3/4")};
+  }
   & > p {
     /* margin-top: 20px; */
     margin-bottom: 20px;

@@ -13,13 +13,13 @@ const StyledButton = styled.a`
   align-items: center;
   transition: 200ms transform ease;
   text-decoration: none;
-  & > span {
+  & > p {
     font-weight: 500;
     margin-bottom: -2px;
-    opacity: 0.5;
-    font-size: 16px;
+    /* opacity: 0.5; */
+    font-size: 12px;
     transition: 200ms opacity ease;
-    color: #000;
+    /* color: #000; */
   }
   :hover {
     transform: scale(1.05);
@@ -40,7 +40,7 @@ const StyledButton = styled.a`
 const RSSButton = props => (
   <StyledButton href="https://wall-street-weekly.podigee.io/feed/mp3">
     <Icon icon={ICONS.RSS} />
-    <span>RSS Feed</span>
+    <p>RSS Feed</p>
   </StyledButton>
 )
 export default RSSButton

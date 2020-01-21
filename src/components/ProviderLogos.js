@@ -14,7 +14,7 @@ const StyledLogos = styled.div`
   margin-bottom: 32px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, minmax(90px, 1fr));
   grid-template-rows: 60px 60px 30px;
   grid-gap: 10px;
   justify-content: center;
