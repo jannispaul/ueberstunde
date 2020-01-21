@@ -7,10 +7,6 @@ import { device } from "../theme/breakpoints"
 import Button from "./Button"
 
 const StyledRecentEpisodes = styled.section`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; */
   padding: 0 24px;
   position: relative;
 

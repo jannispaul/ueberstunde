@@ -13,22 +13,31 @@ const Episode = styled.div`
   display: block;
   padding: 32px 0;
   transition: background 0.2s;
-
-  & > p {
-    margin-bottom: 16px;
-  }
 `
 const PlayerContainer = styled.div`
   display: grid;
-  grid-template-columns: 100px 16px auto;
+  grid-template-columns: 120px 16px auto;
+  grid-row-gap: 20px;
   margin-bottom: 16px;
   align-items: center;
+
   & > picture {
     margin-right: 16px;
+    margin-bottom: 16px;
+  }
+`
+const Excerpt = styled.div`
+  grid-column: ${props => (props.podcast ? "1/4" : "3/4")};
+  & > p {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
   }
 `
 const StyledH3Link = styled(Link)`
   text-decoration: none;
+  & > h3 {
+    margin-bottom: 20px;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -47,9 +56,11 @@ const EpisodeLink = props => (
       <Img sizes={props.image.sizes} alt={props.image.description} />
       <div></div>
       <PodigeePlayer source={props.podcastSlug}></PodigeePlayer>
+      <Excerpt podcast={props.podcastSlug}>
+        <p>{props.excerpt}</p>
+        <StyledLink to={props.slug}>Mehr erfahren</StyledLink>
+      </Excerpt>
     </PlayerContainer>
-    <p>{props.excerpt}</p>
-    <StyledLink to={props.slug}>Mehr erfahren</StyledLink>
   </Episode>
 )
 

@@ -59,7 +59,7 @@
 }
 
 .podcast-player .progress-bar .progress-bar-rail {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #cacaca;
   border-radius: 10px;
   cursor: move;
   /* fallback if grab cursor is unsupported */
@@ -105,7 +105,7 @@
   width: 12px;
 }
 .podcast-player .progress-bar-loaded {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #bbb;
 }
 .podcast-player .progress-bar-buffering {
   background-color: #f7f2fb;
