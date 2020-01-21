@@ -39,9 +39,9 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description
 
-  const ogImageUrl = ogimage || defaultOpenGraphImage
-  // const ogImageUrl =
-  //   site.siteMetadata.siteUrl + (ogimage || defaultOpenGraphImage)
+  // const ogImageUrl = ogimage || defaultOpenGraphImage
+  const ogImageUrl =
+    site.siteMetadata.siteUrl + (ogimage || defaultOpenGraphImage)
 
   return (
     <Helmet

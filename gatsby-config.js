@@ -74,8 +74,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Wall Street Weekly`,
-        short_name: `WSW`,
+        name: `Überstunde`,
+        short_name: `Überstunde`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
