@@ -125,7 +125,7 @@ const Navigation = props => {
       <div>
         <StyledLinks>
           <Link to="/">Podcast</Link>
-          <Link to="/#beitraege">Beiträge</Link>
+          <Link to="/#episoden">Episoden</Link>
           <Link to="/#hosts">Hosts</Link>
         </StyledLinks>
 

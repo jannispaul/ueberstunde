@@ -46,11 +46,11 @@ const KeepInTouch = props => (
       <ContentContainer>
         <h2>Jetzt abonnieren</h2>
         <p>
-          Kostenlos, werbefrei und top-aktuell an jedem Montag: Abonnieren Sie
-          Wall Street Weekly mit Sophie Schimansky bei Ihrem Streaming-Anbieter.
-          Über Ihr Feedback freuen wir uns unter{" "}
-          <a href="mailto:wallstreetweekly@mediapioneer.com">
-            wallstreetweekly@mediapioneer.com
+          Kostenlos, werbefrei und top-aktuell alle zwei Wochen: Abonnieren Sie
+          die Überstunde mit Marina Weisband und Michael Bröcker mit Ihrem
+          Podcast-Player. Über Ihr Feedback freuen wir uns unter{" "}
+          <a href="mailto:ueberstunde@mediapioneer.com">
+            ueberstunde@mediapioneer.com
           </a>
         </p>
 

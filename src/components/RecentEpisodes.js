@@ -49,7 +49,7 @@ export default () => (
     `}
     render={data => (
       <StyledRecentEpisodes>
-        <h2>Aktuelle Beiträge</h2>
+        <h2>Aktuelle Episoden</h2>
         {data.allContentfulPost.edges.map(({ node }) => (
           <EpisodeLink
             key={node.id}
