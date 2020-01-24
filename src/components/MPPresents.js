@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import MPPresents from "../content/images/mp-presents.svg"
 
-const PresentedBy = styled.div`
+const PresentedBy = styled.a`
   height: 55px;
   background: #2c2c2c;
   /* padding-top: 25px; */
@@ -20,7 +20,12 @@ const StyledImage = styled.img`
 `
 
 const MyStatelessComponent = props => (
-  <PresentedBy>
+  <PresentedBy
+    href="https://mediapioneer.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Link to mediapioneer.com"
+  >
     <StyledImage src={MPPresents} alt="Mediapioneer presents Schriftzug" />
   </PresentedBy>
 )

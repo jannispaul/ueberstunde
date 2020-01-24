@@ -12,7 +12,7 @@ import ScrollAnchor from "../components/ScrollAnchor"
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Die Überstunde – mit Marina Weisband und Michael Bröcker"
+      title="Überstunde – der Feierabend-Podcast mit Marina Weisband und Michael Bröcker"
       lang="de"
     />
     <Hero></Hero>
