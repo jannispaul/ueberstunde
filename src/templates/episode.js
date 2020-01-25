@@ -71,13 +71,14 @@ export const query = graphql`
 `
 const StyledHero = styled.section`
   width: 100%;
-  padding: 36px 24px;
+  padding: 36px 24px 0;
   align-items: center;
 
   @media ${device.tablet} {
     padding: 0;
     display: grid;
     grid-template-columns: auto 425px 425px auto;
+    overflow: hidden;
   }
   @media ${device.laptopL} {
     grid-template-columns: auto 625px 625px auto;
@@ -93,8 +94,13 @@ const ContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 2rem;
   & > h1 {
-    color: #fff;
+    color: #000;
+
+    @media ${device.tablet} {
+      color: #fff;
+    }
   }
   @media ${device.tablet} {
     padding: 36px 24px;
@@ -136,7 +142,10 @@ const StyledContent = styled.article`
 `
 
 const SocialContainer = styled.div`
-  font-size: 21.6px;
+  /* font-size: 15px; */
+  @media ${device.mobileL} {
+    font-size: 21.6px;
+  }
   color: #ff0045;
   letter-spacing: 0.34px;
   text-align: center;
@@ -145,8 +154,15 @@ const SocialContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  flex-wrap: wrap;
   & a {
     margin-left: 20px;
+  }
+  & > span {
+    width: 100%;
+    @media ${device.mobileL} {
+      width: auto;
+    }
   }
 `
 
@@ -198,7 +214,9 @@ const EpisodeTemplate = ({ data: { podcast, ogimage, site }, location }) => {
           alt={podcast.image.description}
         />
         <ContentContainer>
-          <SmallLabel color="white">{podcast.createdAt}</SmallLabel>
+          <SmallLabel color="" tabletColor="#fff">
+            {podcast.createdAt}
+          </SmallLabel>
           <h1>{podcast.title}</h1>
           <PodigeePlayer source={podcast.podcastSlug}></PodigeePlayer>
         </ContentContainer>
@@ -287,7 +305,7 @@ const EpisodeTemplate = ({ data: { podcast, ogimage, site }, location }) => {
         ))} */}
         {podcast.gallery ? <Slider images={podcast.gallery}></Slider> : ""}
         <SocialContainer>
-          Share:
+          <span>Share:</span>
           <a
             href={`https://www.facebook.com/sharer/sharer.php?u=${site.siteMetadata.siteUrl}${location.pathname}`}
             target="_blank"
