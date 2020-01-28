@@ -7,7 +7,7 @@ import earliaudio from "../content/images/providers/earliaudio.png"
 import soundcloud from "../content/images/providers/soundcloud.svg"
 import deezer from "../content/images/providers/deezer.svg"
 // import { device } from "../theme/breakpoints"
-import RSSButton from "./RSSButton"
+// import RSSButton from "./RSSButton"
 
 const StyledLogos = styled.div`
   margin-top: 32px;
@@ -80,18 +80,24 @@ const ProviderLogos = props => (
       {/* <img src={apple} alt="apple logo" /> */}
     </a>
     <a
-      href="https://open.spotify.com/show/30ymBlt8WBXptJOEvpg3Sg"
-      target="_blank"
-      rel="noopener noreferrer"
+    // href="https://open.spotify.com/show/30ymBlt8WBXptJOEvpg3Sg"
+    // target="_blank"
+    // rel="noopener noreferrer"
     >
-      <img src={spotify} alt="spotify logo"></img>
+      <Banner>
+        <img src={spotify} alt="spotify logo"></img>
+        <p>Coming soon</p>
+      </Banner>
     </a>
     <a
-      href="https://www.deezer.com/de/show/742072"
-      target="_blank"
-      rel="noopener noreferrer"
+    // href="https://www.deezer.com/de/show/742072"
+    // target="_blank"
+    // rel="noopener noreferrer"
     >
-      <img src={deezer} alt="deezer logo"></img>
+      <Banner>
+        <img src={deezer} alt="deezer logo"></img>
+        <p>Coming soon</p>
+      </Banner>
     </a>
     <a
     // href="https://earli.page.link/N5R3"
@@ -121,7 +127,7 @@ const ProviderLogos = props => (
         <p>Coming soon</p>
       </Banner>
     </a>
-    <RSSButton></RSSButton>
+    {/* <RSSButton></RSSButton> */}
   </StyledLogos>
 )
 export default ProviderLogos
