@@ -47,11 +47,12 @@ const KeepInTouch = props => (
         <h2>Jetzt abonnieren</h2>
         <p>
           Kostenlos, werbefrei und top-aktuell alle zwei Wochen: Abonnieren Sie
-          die Überstunde mit Marina Weisband und Michael Bröcker mit Ihrem
-          Podcast-Player. Über Ihr Feedback freuen wir uns unter{" "}
+          den Überstunde-Podcast mit Marina Weisband und Michael Bröcker mit
+          Ihrem Podcast-Player.
+          {/* Über Ihr Feedback freuen wir uns unter{" "}
           <a href="mailto:ueberstunde@mediapioneer.com">
             ueberstunde@mediapioneer.com
-          </a>
+          </a> */}
         </p>
 
         <ProviderLogos></ProviderLogos>
