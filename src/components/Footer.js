@@ -6,6 +6,7 @@ import Icon from "../components/Icon"
 import { ICONS } from "../theme/Icons"
 
 const StyledFooter = styled.footer`
+  white-space: pre;
   padding: 24px 16px;
   position: relative;
   display: flex;
@@ -21,6 +22,22 @@ const StyledFooter = styled.footer`
     @media ${device.mobileL} {
       flex-direction: row;
     }
+    & > div:first-of-type {
+      /* flex: 1 1 0; */
+      flex-wrap: wrap;
+      flex-direction: column;
+      @media ${device.tablet} {
+        flex-direction: row;
+      }
+    }
+    & > div:last-of-type {
+      flex: 1 1 0;
+      margin-bottom: 1rem;
+      @media ${device.tablet} {
+        margin-bottom: 0;
+      }
+      /* flex-wrap: wrap; */
+    }
     & > div {
       display: flex;
       width: 100%;
@@ -33,13 +50,15 @@ const StyledFooter = styled.footer`
       }
     }
   }
-
+  span {
+    opacity: 0.8;
+  }
   /*Links in footer*/
   a {
-    margin: 10px;
+    margin-right: 10px;
     text-decoration: undeline;
     text-decoration-color: rgba(0, 0, 0, 0);
-    line-height: 2;
+    /* line-height: 2; */
     display: flex;
 
     :hover {
@@ -58,6 +77,9 @@ const StyledIcon = styled.div`
       fill: #ff0045;
     }
   }
+`
+const Backlink = styled.div`
+  display: flex;
 `
 const Footer = props => (
   <StyledFooter>
@@ -79,6 +101,28 @@ const Footer = props => (
         >
           Datenschutz
         </a>
+        <Backlink>
+          <span>Website: </span>
+          <a
+            href="https://pixel-pink.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link zur PixelPink-Website"
+          >
+            PixelPink
+          </a>
+        </Backlink>
+        <Backlink>
+          <span>Artwork: </span>
+          <a
+            href="https://amadeusamadeus.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link zu Amadeus Fronks Website"
+          >
+            Amadeus Fronk
+          </a>
+        </Backlink>
       </div>
       <div>
         <a
