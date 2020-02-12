@@ -1,5 +1,5 @@
 # Redirect domain aliases to primary domain
-# https://xn--berstunde-p9a.com* https://xn--berstunde-p9a.com/:splat 301!
+# https://ueberstunde.com* https://ueberstunde.com/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
 https://xenodochial-hawking-30a248.netlify.com* https://xn--berstunde-p9a.com/:splat 301!

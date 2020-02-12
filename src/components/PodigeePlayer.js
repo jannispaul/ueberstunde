@@ -18,8 +18,8 @@ class StaticPodigeePlayer extends React.Component {
       },
       options: {
         theme: {
-          html: "https://xn--berstunde-p9a.com/podigee/index.html",
-          css: `https://xn--berstunde-p9a.coms/podigee/index.css`,
+          html: "https://ueberstunde.com/podigee/index.html",
+          css: `https://ueberstunde.com/podigee/index.css`,
         },
       },
     })
