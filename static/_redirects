@@ -4,5 +4,12 @@
 # Optional: Redirect default Netlify subdomain to primary domain
 https://xenodochial-hawking-30a248.netlify.com* https://xn--berstunde-p9a.com/:splat 301!
 
-
-
+# Redirect domain aliases to primary domain
+https://xn--berstunde-p9a.com* https://ueberstunde.com/:splat 301!
+https://www.xn--berstunde-p9a.com* https://ueberstunde.com/:splat 301!
+https://ueber-stunde.com* https://ueberstunde.com/:splat 301!
+https://www.ueber-stunde.com* https://ueberstunde.com/:splat 301!
+https://xn--ber-stunden-shb.com* https://ueberstunde.com/:splat 301!
+https://www.xn--ber-stunden-shb.com* https://ueberstunde.com/:splat 301!
+https://xn--ber-stunde-8db.com* https://ueberstunde.com/:splat 301!
+https://www.xn--ber-stunde-8db.com* https://ueberstunde.com/:splat 301!
