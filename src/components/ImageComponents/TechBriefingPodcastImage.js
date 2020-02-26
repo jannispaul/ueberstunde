@@ -8,11 +8,11 @@ const StyledImage = styled(Img)`
   box-shadow: 0 1px 11px 8px rgba(174, 174, 174, 0.12);
 `
 
-const MBPodcastImage = () => (
+const TechBriefingPodcastImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "products/the-americans-podcast.jpg" }) {
+        file(relativePath: { eq: "products/tech-briefing.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 240) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -32,4 +32,4 @@ const MBPodcastImage = () => (
     }}
   />
 )
-export default MBPodcastImage
+export default TechBriefingPodcastImage

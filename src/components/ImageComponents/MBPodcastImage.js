@@ -14,7 +14,7 @@ const MBPodcastImage = () => (
       query {
         file(relativePath: { eq: "products/morning-briefing-podcast.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 200) {
+            fluid(maxWidth: 240) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }

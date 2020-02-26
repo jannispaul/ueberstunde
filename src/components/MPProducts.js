@@ -8,6 +8,8 @@ import WallStreetWeeklyPodcastImage from "./ImageComponents/WallStreetWeeklyPodc
 // import PioneerBlogImage from "./ImageComponents/PioneerBlogImage"
 // import PioneerOneImage from "./ImageComponents/PioneerOneImage"
 import mpLogo from "../content/images/MP-logo.svg"
+import TechBriefingPodcastImage from "./ImageComponents/TechBriefingPodcastImage"
+import BeyondTheObviousPodcastImage from "./ImageComponents/BeyondTheObviousPodcastImage"
 
 const StyledSection = styled.section`
   background: #f7f2fb;
@@ -32,22 +34,22 @@ const StyledLogo = styled.img`
 `
 const ProductContainer = styled.div`
   width: 100%;
-  max-width: 900px;
+  max-width: 1300px;
   margin: auto;
-  display: grid;
   margin-top: 32px;
   grid-gap: 12px;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 
   @media ${device.tablet} {
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
     /* grid-template-columns: repeat(4, minmax(192px, 1fr)); */
     margin-top: 64px;
   }
   a {
     text-decoration: none;
-    /* font-family: Avenir-Medium, "Open Sans", -apple-system, BlinkMacSystemFont,
-      Arial, sans-serif; */
     color: #2c2c2c;
     font-size: 14px;
     letter-spacing: 0.17px;
@@ -59,7 +61,7 @@ const ProductContainer = styled.div`
     width: 100%;
 
     @media ${device.laptop} {
-      font-size: 20px;
+      font-size: 18px;
       letter-spacing: 0.27px;
       line-height: 30px;
     }
@@ -112,6 +114,22 @@ const MPProducts = props => (
         >
           <WallStreetWeeklyPodcastImage></WallStreetWeeklyPodcastImage>
           <p>Wall Street Weekly – mit Sophie Schimanski</p>
+        </a>
+        <a
+          href="https://mediapioneer.com/techbriefing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TechBriefingPodcastImage></TechBriefingPodcastImage>
+          <p>Tech Briefing – mit Daniel Fiene & Christian Miele</p>
+        </a>
+        <a
+          href="https://think-beyondtheobvious.com/stelters-podcasts/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <BeyondTheObviousPodcastImage></BeyondTheObviousPodcastImage>
+          <p>Beyond The Bbvious – mit Dr. Daniel Stelter</p>
         </a>
 
         {/*<a
