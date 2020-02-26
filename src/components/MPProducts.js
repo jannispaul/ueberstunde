@@ -131,31 +131,6 @@ const MPProducts = props => (
           <BeyondTheObviousPodcastImage></BeyondTheObviousPodcastImage>
           <p>Beyond The Bbvious – mit Dr. Daniel Stelter</p>
         </a>
-
-        {/*<a
-          href="https://www.gaborsteingart.com/morning-briefing/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MBNewsletterImage></MBNewsletterImage>
-          <p>Steingarts Morning Breifing Newsletter</p>
-        </a>
-         <a
-          href="https://mediapioneer.com/blog/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <PioneerBlogImage></PioneerBlogImage>
-          <p>Pioneer Blog – von Michael Bröcker</p>
-        </a>
-        <a
-          href="https://mediapioneer.com/redaktionsschiff/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <PioneerOneImage></PioneerOneImage>
-          <p>Pioneer One – das Redaktionsschiff</p>
-        </a> */}
       </ProductContainer>
     </div>
   </StyledSection>

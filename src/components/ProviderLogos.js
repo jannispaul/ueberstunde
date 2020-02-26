@@ -38,33 +38,33 @@ const StyledLogos = styled.div`
 const StyledImage = styled.img`
   width: 34px;
 `
-const Banner = styled.div`
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-  justify-content: center;
-  align-items: center;
-  & > p {
-    grid-column: 1;
-    grid-row: 1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: 0 auto;
-    z-index: 1;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  & > img {
-    grid-column: 1;
-    grid-row: 1;
-    filter: grayscale(1);
-    opacity: 0.2;
-    margin: auto;
-    z-index: 0;
-  }
-`
+// const Banner = styled.div`
+//   display: grid;
+//   grid-template-columns: 100%;
+//   grid-template-rows: 100%;
+//   justify-content: center;
+//   align-items: center;
+//   & > p {
+//     grid-column: 1;
+//     grid-row: 1;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     margin: 0 auto;
+//     z-index: 1;
+//     font-size: 12px;
+//     font-weight: 500;
+//   }
+//   & > img {
+//     grid-column: 1;
+//     grid-row: 1;
+//     filter: grayscale(1);
+//     opacity: 0.2;
+//     margin: auto;
+//     z-index: 0;
+//   }
+// `
 
 const ProviderLogos = props => (
   <StyledLogos>
