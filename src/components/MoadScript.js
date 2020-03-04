@@ -16,6 +16,7 @@ const loadScript = url =>
         resolve(script)
       }
     }
+
     script.onload = script.onreadystatechange
 
     script.onerror = msg => {
