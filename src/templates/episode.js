@@ -217,6 +217,9 @@ class EpisodeTemplate extends React.Component {
   }
   componentDidMount() {
     this.loadViovendiScript()
+    var evt = document.createEvent("Event")
+    evt.initEvent("load", false, false)
+    window.dispatchEvent(evt)
   }
   render() {
     return (
