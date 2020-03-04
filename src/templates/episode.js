@@ -212,14 +212,14 @@ class EpisodeTemplate extends React.Component {
     // load  scripts when the component was mounted
     const script = document.createElement("script")
     script.src = "https://doo.net/viovendi-embed.js"
-    script.async = true
+    // script.async = false
     document.body.appendChild(script)
   }
   componentDidMount() {
     this.loadViovendiScript()
-    var evt = document.createEvent("Event")
-    evt.initEvent("load", false, false)
-    window.dispatchEvent(evt)
+    // var evt = document.createEvent("Event")
+    // evt.initEvent("load", false, false)
+    // window.dispatchEvent(evt)
   }
   render() {
     return (
