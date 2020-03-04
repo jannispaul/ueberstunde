@@ -12,15 +12,12 @@ import { ICONS } from "../theme/Icons"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import PodigeePlayer from "../components/PodigeePlayer"
+import loadScript from "../components/loadScript"
 import ContentfulRichTextImage from "../components/ContentfulRichTextImage"
 import KeepInTouch from "../components/KeepInTouch"
-// import MoreOfTheAmericans from "../components/MoreOfTheAmericans"
 import SmallLabel from "../components/SmallLabel"
 import Slider from "../components/Slider"
 import EpisodeHeroImage from "../components/ImageComponents/EpisodeHeroImage"
-// import { render } from "react-dom"
-// import Form from "../components/Form"
-// import Fragments from "../components/Fragments"
 
 export const query = graphql`
   query($slug: String!, $filename: String!) {
@@ -202,24 +199,48 @@ const IframeContainer = styled.span`
 
 // const EpisodeTemplate = { data: { podcast, ogimage, site }, location }
 class EpisodeTemplate extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      loadViovendiPlayer: false,
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     loadViovendiPlayer: false,
+  //   }
+  // }
+  // componentDidMount() {
+  //   this.loadViovendiScript()
+  //   // var evt = document.createEvent("Event")
+  //   // evt.initEvent("load", false, false)
+  //   // window.dispatchEvent(evt)
+  // }
+  // loadViovendiScript() {
+  //   // load  scripts when the component was mounted
+  //   const script = document.createElement("script")
+  //   script.src = "https://doo.net/viovendi-embed.js"
+  //   script.async = false
+  //   document.body.appendChild(script)
+  // }
+
+  componentDidMount() {
+    if (!window.viovendi) {
+      this.loadViovendiScript()
+    } else if (!window.viovendi) {
+      this.loadViovendiScript()
+    } else {
+      this.setState({ apiLoaded: true })
     }
   }
+
   loadViovendiScript() {
-    // load  scripts when the component was mounted
-    const script = document.createElement("script")
-    script.src = "https://doo.net/viovendi-embed.js"
-    // script.async = false
-    document.body.appendChild(script)
-  }
-  componentDidMount() {
-    this.loadViovendiScript()
-    // var evt = document.createEvent("Event")
-    // evt.initEvent("load", false, false)
-    // window.dispatchEvent(evt)
+    // Load the google maps api script when the component is mounted.
+
+    loadScript("https://doo.net/viovendi-embed.js")
+      .then(script => {
+        // Grab the script object in case it is ever needed.
+        this.viovendiScript = script
+        this.setState({ apiLoaded: true })
+      })
+      .catch(err => {
+        console.error(err.message)
+      })
   }
   render() {
     return (
