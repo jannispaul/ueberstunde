@@ -12,15 +12,12 @@ import { ICONS } from "../theme/Icons"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import PodigeePlayer from "../components/PodigeePlayer"
+// import useScript from "../components/useScript"
 import ContentfulRichTextImage from "../components/ContentfulRichTextImage"
 import KeepInTouch from "../components/KeepInTouch"
-// import MoreOfTheAmericans from "../components/MoreOfTheAmericans"
 import SmallLabel from "../components/SmallLabel"
 import Slider from "../components/Slider"
 import EpisodeHeroImage from "../components/ImageComponents/EpisodeHeroImage"
-// import { render } from "react-dom"
-// import Form from "../components/Form"
-// import Fragments from "../components/Fragments"
 
 export const query = graphql`
   query($slug: String!, $filename: String!) {
@@ -202,12 +199,13 @@ const IframeContainer = styled.span`
 
 // const EpisodeTemplate = { data: { podcast, ogimage, site }, location }
 class EpisodeTemplate extends React.Component {
-  //   constructor() {
-  //     super()
-  //     this.state = {
-  //       loadViovendiPlayer: false,
-  //     }
+  // function EpisodeTemplate(this.props) {
+  // constructor() {
+  //   super()
+  //   state = {
+  //     loadViovendiPlayer: false,
   //   }
+  // }
   loadViovendiScript() {
     // load  scripts when the component was mounted
     const script = document.createElement("script")
@@ -216,11 +214,38 @@ class EpisodeTemplate extends React.Component {
     document.body.appendChild(script)
   }
   componentDidMount() {
-    this.loadViovendiScript()
-    if (!window.document["viovendi-booking-46924"]) {
-      this.loadViovendiScript()
-    }
+    // if (!window.document) {
+    // }
+    loadViovendiScript()
+    // var evt = document.createEvent("Event")
+    // evt.initEvent("load", false, false)
+    // window.dispatchEvent(evt)
   }
+
+  // componentDidMount() {
+  //   if (!window.viovendi) {
+  //     loadViovendiScript()
+  //   } else if (!window.viovendi) {
+  //     loadViovendiScript()
+  //   } else {
+  //     setState({ apiLoaded: true })
+  //   }
+  // }
+
+  // loadViovendiScript() {
+  //   // Load the google maps api script when the component is mounted.
+
+  //   loadScript("https://doo.net/viovendi-embed.js")
+  //     .then(script => {
+  //       // Grab the script object in case it is ever needed.
+  //       viovendiScript = script
+  //       setState({ apiLoaded: true })
+  //     })
+  //     .catch(err => {
+  //       console.error(err.message)
+  //     })
+  // }
+  // useScript("https://doo.net/viovendi-embed.js")
   render() {
     return (
       <Layout>
@@ -256,7 +281,7 @@ class EpisodeTemplate extends React.Component {
                     )
                   } else if (embedded.includes("viovendi")) {
                     return (
-                      <div dangerouslySetInnerHTML={{ __html: embedded }} />
+                      <span dangerouslySetInnerHTML={{ __html: embedded }} />
                     )
                   } else if (embedded.includes("youtu")) {
                     return (
