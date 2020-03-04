@@ -12,7 +12,7 @@ import { ICONS } from "../theme/Icons"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import PodigeePlayer from "../components/PodigeePlayer"
-import loadScript from "../components/loadScript"
+// import loadScript from "../components/loadScript"
 import ContentfulRichTextImage from "../components/ContentfulRichTextImage"
 import KeepInTouch from "../components/KeepInTouch"
 import SmallLabel from "../components/SmallLabel"
@@ -205,43 +205,43 @@ class EpisodeTemplate extends React.Component {
   //     loadViovendiPlayer: false,
   //   }
   // }
-  // componentDidMount() {
-  //   this.loadViovendiScript()
-  //   // var evt = document.createEvent("Event")
-  //   // evt.initEvent("load", false, false)
-  //   // window.dispatchEvent(evt)
-  // }
-  // loadViovendiScript() {
-  //   // load  scripts when the component was mounted
-  //   const script = document.createElement("script")
-  //   script.src = "https://doo.net/viovendi-embed.js"
-  //   script.async = false
-  //   document.body.appendChild(script)
-  // }
-
   componentDidMount() {
-    if (!window.viovendi) {
-      this.loadViovendiScript()
-    } else if (!window.viovendi) {
-      this.loadViovendiScript()
-    } else {
-      this.setState({ apiLoaded: true })
-    }
+    this.loadViovendiScript()
+    // var evt = document.createEvent("Event")
+    // evt.initEvent("load", false, false)
+    // window.dispatchEvent(evt)
   }
-
   loadViovendiScript() {
-    // Load the google maps api script when the component is mounted.
-
-    loadScript("https://doo.net/viovendi-embed.js")
-      .then(script => {
-        // Grab the script object in case it is ever needed.
-        this.viovendiScript = script
-        this.setState({ apiLoaded: true })
-      })
-      .catch(err => {
-        console.error(err.message)
-      })
+    // load  scripts when the component was mounted
+    const script = document.createElement("script")
+    script.src = "https://doo.net/viovendi-embed.js"
+    script.async = false
+    document.body.appendChild(script)
   }
+
+  // componentDidMount() {
+  //   if (!window.viovendi) {
+  //     this.loadViovendiScript()
+  //   } else if (!window.viovendi) {
+  //     this.loadViovendiScript()
+  //   } else {
+  //     this.setState({ apiLoaded: true })
+  //   }
+  // }
+
+  // loadViovendiScript() {
+  //   // Load the google maps api script when the component is mounted.
+
+  //   loadScript("https://doo.net/viovendi-embed.js")
+  //     .then(script => {
+  //       // Grab the script object in case it is ever needed.
+  //       this.viovendiScript = script
+  //       this.setState({ apiLoaded: true })
+  //     })
+  //     .catch(err => {
+  //       console.error(err.message)
+  //     })
+  // }
   render() {
     return (
       <Layout>
