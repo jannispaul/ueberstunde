@@ -12,7 +12,7 @@ import { ICONS } from "../theme/Icons"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import PodigeePlayer from "../components/PodigeePlayer"
-// import loadScript from "../components/loadScript"
+import useScript from "../components/useScript"
 import ContentfulRichTextImage from "../components/ContentfulRichTextImage"
 import KeepInTouch from "../components/KeepInTouch"
 import SmallLabel from "../components/SmallLabel"
@@ -198,34 +198,35 @@ const IframeContainer = styled.span`
 // `
 
 // const EpisodeTemplate = { data: { podcast, ogimage, site }, location }
-class EpisodeTemplate extends React.Component {
+// class EpisodeTemplate extends React.Component {
+function EpisodeTemplate(props) {
   // constructor() {
   //   super()
-  //   this.state = {
+  //   state = {
   //     loadViovendiPlayer: false,
   //   }
   // }
-  componentDidMount() {
-    this.loadViovendiScript()
-    // var evt = document.createEvent("Event")
-    // evt.initEvent("load", false, false)
-    // window.dispatchEvent(evt)
-  }
-  loadViovendiScript() {
-    // load  scripts when the component was mounted
-    const script = document.createElement("script")
-    script.src = "https://doo.net/viovendi-embed.js"
-    script.async = false
-    document.body.appendChild(script)
-  }
+  // componentDidMount() {
+  //   loadViovendiScript()
+  //   var evt = document.createEvent("Event")
+  //   evt.initEvent("load", false, false)
+  //   window.dispatchEvent(evt)
+  // }
+  // loadViovendiScript() {
+  //   // load  scripts when the component was mounted
+  //   const script = document.createElement("script")
+  //   script.src = "https://doo.net/viovendi-embed.js"
+  //   script.async = true
+  //   document.body.appendChild(script)
+  // }
 
   // componentDidMount() {
   //   if (!window.viovendi) {
-  //     this.loadViovendiScript()
+  //     loadViovendiScript()
   //   } else if (!window.viovendi) {
-  //     this.loadViovendiScript()
+  //     loadViovendiScript()
   //   } else {
-  //     this.setState({ apiLoaded: true })
+  //     setState({ apiLoaded: true })
   //   }
   // }
 
@@ -235,139 +236,136 @@ class EpisodeTemplate extends React.Component {
   //   loadScript("https://doo.net/viovendi-embed.js")
   //     .then(script => {
   //       // Grab the script object in case it is ever needed.
-  //       this.viovendiScript = script
-  //       this.setState({ apiLoaded: true })
+  //       viovendiScript = script
+  //       setState({ apiLoaded: true })
   //     })
   //     .catch(err => {
   //       console.error(err.message)
   //     })
   // }
-  render() {
-    return (
-      <Layout>
-        <SEO
-          title={this.props.data.podcast.title}
-          ogimage={this.props.data.ogimage.edges[0].node.resize.src}
-          description={this.props.data.podcast.description.description}
+  // render() {
+  useScript("https://doo.net/viovendi-embed.js")
+  return (
+    <Layout>
+      <SEO
+        title={props.data.podcast.title}
+        ogimage={props.data.ogimage.edges[0].node.resize.src}
+        description={props.data.podcast.description.description}
+      />
+      <StyledHero>
+        <EpisodeHeroImage></EpisodeHeroImage>
+        <CoverImage
+          sizes={props.data.podcast.image.sizes}
+          alt={props.data.podcast.image.description}
         />
-        <StyledHero>
-          <EpisodeHeroImage></EpisodeHeroImage>
-          <CoverImage
-            sizes={this.props.data.podcast.image.sizes}
-            alt={this.props.data.podcast.image.description}
-          />
-          <ContentContainer>
-            <SmallLabel color="" tabletColor="#fff">
-              {this.props.data.podcast.createdAt}
-            </SmallLabel>
-            <h1>{this.props.data.podcast.title}</h1>
-            <PodigeePlayer
-              source={this.props.data.podcast.podcastSlug}
-            ></PodigeePlayer>
-          </ContentContainer>
-        </StyledHero>
-        <StyledContent>
-          <div>
-            {documentToReactComponents(this.props.data.podcast.body.json, {
-              renderMark: {
-                [MARKS.CODE]: embedded => {
-                  if (embedded.includes("docs.google.com")) {
-                    return (
+        <ContentContainer>
+          <SmallLabel color="" tabletColor="#fff">
+            {props.data.podcast.createdAt}
+          </SmallLabel>
+          <h1>{props.data.podcast.title}</h1>
+          <PodigeePlayer
+            source={props.data.podcast.podcastSlug}
+          ></PodigeePlayer>
+        </ContentContainer>
+      </StyledHero>
+      <StyledContent>
+        <div>
+          {documentToReactComponents(props.data.podcast.body.json, {
+            renderMark: {
+              [MARKS.CODE]: embedded => {
+                if (embedded.includes("docs.google.com")) {
+                  return <div dangerouslySetInnerHTML={{ __html: embedded }} />
+                } else if (embedded.includes("viovendi")) {
+                  return <span dangerouslySetInnerHTML={{ __html: embedded }} />
+                } else if (embedded.includes("youtu")) {
+                  return (
+                    <IframeContainer>
                       <div dangerouslySetInnerHTML={{ __html: embedded }} />
-                    )
-                  } else if (embedded.includes("viovendi")) {
-                    return (
-                      <span dangerouslySetInnerHTML={{ __html: embedded }} />
-                    )
-                  } else if (embedded.includes("youtu")) {
-                    return (
-                      <IframeContainer>
-                        <div dangerouslySetInnerHTML={{ __html: embedded }} />
-                      </IframeContainer>
-                    )
-                  }
-                },
+                    </IframeContainer>
+                  )
+                }
               },
-              renderNode: {
-                [BLOCKS.EMBEDDED_ASSET]: node => (
-                  <div>
-                    <figure>
-                      <ContentfulRichTextImage
-                        node={node}
-                        richTextImageWidth="740"
-                        richTextImageQuality="60"
-                      ></ContentfulRichTextImage>
-                      <figcaption>
-                        {node.data.target.fields.description["de"]}
-                      </figcaption>
-                    </figure>
-                  </div>
-                ),
-              },
-            })}
-          </div>
-          {this.props.data.podcast.gallery ? (
-            <Slider images={this.props.data.podcast.gallery}></Slider>
-          ) : (
-            ""
-          )}
-          <SocialContainer>
-            <span>Share:</span>
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledIcon>
-                <Icon icon={ICONS.FACEBOOK} />
-              </StyledIcon>
-            </a>
-            <a
-              href={`
-          https://www.linkedin.com/shareArticle?mini=true&url=${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledIcon>
-                <Icon icon={ICONS.LINKEDIN} />
-              </StyledIcon>
-            </a>
-            <a
-              href={`https://twitter.com/intent/tweet?text=Diese Überstunde machen wir freiwillig. Der Podcast-Talk mit Marina Weisband und Michael Bröcker: ${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledIcon>
-                <Icon icon={ICONS.TWITTER} />
-              </StyledIcon>
-            </a>
-            <a
-              href={`whatsapp://send?text=${this.props.data.podcast.title} – Diese Überstunde machen wir freiwillig. Der Podcast-Talk mit Marina Weisband und Michael Bröcker: ${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`}
-              dataaction="share/whatsapp/share"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledIcon>
-                <Icon icon={ICONS.WHATSAPP} />
-              </StyledIcon>
-            </a>
-            <a
-              href={`mailto:?&subject=${this.props.data.podcast.title}&body=Diese Überstunde machen wir freiwillig. Der Podcast-Talk mit Marina Weisband und Michael Bröcker:%0D%0A${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledIcon>
-                <Icon icon={ICONS.EMAIL} />
-              </StyledIcon>
-            </a>
-          </SocialContainer>
-        </StyledContent>
-        <Seperator></Seperator>
-        {/* <MoreOfTheAmericans></MoreOfTheAmericans> */}
-        <KeepInTouch></KeepInTouch>
-      </Layout>
-    )
-  }
+            },
+            renderNode: {
+              [BLOCKS.EMBEDDED_ASSET]: node => (
+                <div>
+                  <figure>
+                    <ContentfulRichTextImage
+                      node={node}
+                      richTextImageWidth="740"
+                      richTextImageQuality="60"
+                    ></ContentfulRichTextImage>
+                    <figcaption>
+                      {node.data.target.fields.description["de"]}
+                    </figcaption>
+                  </figure>
+                </div>
+              ),
+            },
+          })}
+        </div>
+        {props.data.podcast.gallery ? (
+          <Slider images={props.data.podcast.gallery}></Slider>
+        ) : (
+          ""
+        )}
+        <SocialContainer>
+          <span>Share:</span>
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${props.data.site.siteMetadata.siteUrl}${props.location.pathname}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.FACEBOOK} />
+            </StyledIcon>
+          </a>
+          <a
+            href={`
+          https://www.linkedin.com/shareArticle?mini=true&url=${props.data.site.siteMetadata.siteUrl}${props.location.pathname}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.LINKEDIN} />
+            </StyledIcon>
+          </a>
+          <a
+            href={`https://twitter.com/intent/tweet?text=Diese Überstunde machen wir freiwillig. Der Podcast-Talk mit Marina Weisband und Michael Bröcker: ${props.data.site.siteMetadata.siteUrl}${props.location.pathname}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.TWITTER} />
+            </StyledIcon>
+          </a>
+          <a
+            href={`whatsapp://send?text=${props.data.podcast.title} – Diese Überstunde machen wir freiwillig. Der Podcast-Talk mit Marina Weisband und Michael Bröcker: ${props.data.site.siteMetadata.siteUrl}${props.location.pathname}`}
+            dataaction="share/whatsapp/share"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.WHATSAPP} />
+            </StyledIcon>
+          </a>
+          <a
+            href={`mailto:?&subject=${props.data.podcast.title}&body=Diese Überstunde machen wir freiwillig. Der Podcast-Talk mit Marina Weisband und Michael Bröcker:%0D%0A${props.data.site.siteMetadata.siteUrl}${props.location.pathname}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledIcon>
+              <Icon icon={ICONS.EMAIL} />
+            </StyledIcon>
+          </a>
+        </SocialContainer>
+      </StyledContent>
+      <Seperator></Seperator>
+      {/* <MoreOfTheAmericans></MoreOfTheAmericans> */}
+      <KeepInTouch></KeepInTouch>
+    </Layout>
+  )
 }
+// }
 
 export default EpisodeTemplate
