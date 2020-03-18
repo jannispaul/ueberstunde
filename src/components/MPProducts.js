@@ -6,7 +6,7 @@ import TheAmericansPodcastImage from "./ImageComponents/TheAmericansPodcastImage
 import WallStreetWeeklyPodcastImage from "./ImageComponents/WallStreetWeeklyPodcastImage"
 // import MBNewsletterImage from "./ImageComponents/MBNewsletterImage"
 // import PioneerBlogImage from "./ImageComponents/PioneerBlogImage"
-// import PioneerOneImage from "./ImageComponents/PioneerOneImage"
+import DerAchteTagPodcastImage from "./ImageComponents/DerAchteTagPodcastImage"
 import mpLogo from "../content/images/MP-logo.svg"
 import TechBriefingPodcastImage from "./ImageComponents/TechBriefingPodcastImage"
 import BeyondTheObviousPodcastImage from "./ImageComponents/BeyondTheObviousPodcastImage"
@@ -44,7 +44,7 @@ const ProductContainer = styled.div`
 
   @media ${device.tablet} {
     display: grid;
-    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
     /* grid-template-columns: repeat(4, minmax(192px, 1fr)); */
     margin-top: 64px;
   }
@@ -61,7 +61,7 @@ const ProductContainer = styled.div`
     width: 100%;
 
     @media ${device.laptop} {
-      font-size: 18px;
+      font-size: 16px;
       letter-spacing: 0.27px;
       line-height: 30px;
     }
@@ -130,6 +130,14 @@ const MPProducts = props => (
         >
           <BeyondTheObviousPodcastImage></BeyondTheObviousPodcastImage>
           <p>Beyond The Bbvious – mit Dr. Daniel Stelter</p>
+        </a>
+        <a
+          href="https://mediapioneer.com/der-achte-tag/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DerAchteTagPodcastImage></DerAchteTagPodcastImage>
+          <p>Der Achte Tag</p>
         </a>
       </ProductContainer>
     </div>
