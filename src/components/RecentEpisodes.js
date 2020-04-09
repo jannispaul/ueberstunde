@@ -24,7 +24,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query LatestEpisodesQuery {
-        allContentfulPost(sort: { order: ASC, fields: createdAt }, limit: 3) {
+        allContentfulPost(sort: { order: DESC, fields: createdAt }, limit: 3) {
           edges {
             node {
               podcastSlug
